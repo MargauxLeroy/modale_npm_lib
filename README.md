@@ -1,0 +1,1 @@
+# modale_npm_lib
