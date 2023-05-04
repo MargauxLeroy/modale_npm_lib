@@ -2,9 +2,8 @@
   "name": "modale_npm_lib",
   "version": "1.0.0",
   "description": "A simple react component library for the hrnet project (OpenClassrooms)",
-  "main": "index.js",
-  "type": "module",
-  "types": "dist/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "exports": {
     ".": {
       "require": "./dist/react-component-library.cjs",
