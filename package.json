@@ -1,13 +1,13 @@
 {
-  "name": "modale_npm_lib",
-  "version": "1.0.1",
+  "name": "@khazeral/npm_lib",
+  "version": "1.0.34",
   "description": "A simple react component library for the hrnet project (OpenClassrooms)",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/react-component-library.cjs",
-      "import": "./dist/react-component-library.es.js"
+      "require": "./dist/index.js",
+      "import": "./dist/index.es.js"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
@@ -15,34 +15,37 @@
     }
   },
   "files": [
-    "dist"
+    "dist/**/*",
+    "dist/**/*.d.ts"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MargauxLeroy/modale_npm_lib.git"
+    "url": "git+https://github.com/Khazeral/NPM_LIB.git"
   },
   "keywords": [
     "React",
     "OpenClassrooms",
     "Modal"
   ],
-  "author": "Margaux Leroy",
+  "author": "Erwan Dehousse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MargauxLeroy/modale_npm_lib/issues"
+    "url": "https://github.com/Khazeral/NPM_LIB/issues"
   },
-  "homepage": "https://github.com/MargauxLeroy/modale_npm_lib#readme",
+  "homepage": "https://github.com/Khazeral/NPM_LIB#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.5",
     "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.1",
     "@storybook/addon-essentials": "^7.0.8",
     "@storybook/addon-interactions": "^7.0.8",
     "@storybook/addon-links": "^7.0.8",
